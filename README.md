@@ -48,6 +48,7 @@ El proyecto fue compilado y ejecutado correctamente utilizando GitHub Codespaces
 ## Compilación en GitHub Codespaces
 
 El proyecto fue desarrollado y probado utilizando GitHub Codespaces.
+desde el menú de github se abre la opción de codespace, luego se pone new Codespace y se marca la carpeta del repositorio 
 
 La estructura principal del repositorio es:
 ```text
