@@ -9,37 +9,37 @@ El sistema permite cargar pacientes desde un archivo de texto, almacenarlos inic
 
 ## Integrante 1
 
-** *Nombre: Diego Ivan Seco Burgos 
+* **Nombre: Diego Ivan Seco Burgos 
 
-** *RUT: 21.892.538-3
+* **RUT: 21.892.538-3
 
-** *Nombre en GitHub: DiegoSB20
+* **Nombre en GitHub: DiegoSB20
 
-** *Carrera: Ingeniería Civil en Computación e Informática
+* **Carrera: Ingeniería Civil en Computación e Informática
 
-** *Paralelo: C1
+* **Paralelo: C1
 
 ## Integrante 2
 
-** *Nombre: David Sebastián Rodríguez Guevara 
+* **Nombre: David Sebastián Rodríguez Guevara 
 
-** *RUT: 21.806.579-1
+* **RUT: 21.806.579-1
 
-** *Nombre en GitHub: DatCursed
+* **Nombre en GitHub: DatCursed
 
-** *Carrera: Ingeniería Civil en Computación e Informática
+* **Carrera: Ingeniería Civil en Computación e Informática
 
-** *Paralelo: C2 
+* **Paralelo: C2 
 
 # Requisitos
 
 Para compilar el proyecto se necesita:
 
-** *Compilador compatible con C++17.
+* **Compilador compatible con C++17.
 
-** *CMake.
+* **CMake.
 
-** *Entorno Linux o GitHub Codespaces.
+* **Entorno Linux o GitHub Codespaces.
 
 El proyecto fue compilado y ejecutado correctamente utilizando GitHub Codespaces.
 
