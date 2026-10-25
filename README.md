@@ -43,6 +43,79 @@ Para compilar el proyecto se necesita:
 
 El proyecto fue compilado y ejecutado correctamente utilizando GitHub Codespaces.
 
+# Instrucciones de compilacion y ejecucion 
+
+## Compilación en GitHub Codespaces
+
+El proyecto fue desarrollado y probado utilizando GitHub Codespaces.
+
+La estructura principal del repositorio es:
+```text
+Taller_2_Estructura_De_Datos/
+├── Clases/
+├── Core/
+├── Data_structures/
+├── .gitignore
+├── CMakeLists.txt
+├── Pacientes.txt
+├── README.md
+└── main.cpp
+```
+
+El archivo CMakeLists.txt se encuentra directamente en la raíz del repositorio.
+
+Al abrir el repositorio mediante GitHub Codespaces, se puede verificar la ubicación actual utilizando:
+
+```text
+pwd
+```
+
+* La carpeta del proyecto corresponde a:
+* 
+```text
+/workspaces/Taller_2_Estructura_De_Datos
+```
+* En caso de no encontrarse en esa carpeta:
+
+```text
+cd /workspaces/Taller_2_Estructura_De_Datos
+```
+
+## Compilación
+
+Para realizar una compilación limpia:
+
+```text
+rm -rf build
+cmake -S . -B build
+cmake --build build
+```
+
+Si la compilación termina correctamente, debería aparecer un mensaje similar a:
+
+```text
+[100%] Built target Taller_2_Estructura_De_Datos
+```
+
+## Ejecución
+
+Una vez compilado el proyecto, se ejecuta mediante:
+
+
+```text
+./build/Taller_2_Estructura_De_Datos
+```
+
+Por lo tanto, el procedimiento completo de compilación y ejecución es:
+
+```text
+rm -rf build
+cmake -S . -B build
+cmake --build build
+./build/Taller_2_Estructura_De_Datos
+```
+
+
 # Criterio del árbol de decisión
 
 El criterio fue organizado buscando identificar primero situaciones específicas y posteriormente condiciones más generales.
