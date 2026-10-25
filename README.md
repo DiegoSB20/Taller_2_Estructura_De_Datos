@@ -43,3 +43,175 @@ Para compilar el proyecto se necesita:
 
 El proyecto fue compilado y ejecutado correctamente utilizando GitHub Codespaces.
 
+# Criterio del árbol de decisión
+
+El criterio fue organizado buscando identificar primero situaciones específicas y posteriormente condiciones más generales.
+
+La estructura implementada es:
+
+¿Trauma?
+|
+|-- Sí:
+|   ¿Requiere cirugía?
+|   |
+|   |-- Sí: Cirugía
+|   |
+|   |-- No: Traumatología
+|
+|-- No:
+    ¿Edad < 14?
+    |
+    |-- Sí: Pediatría
+    |
+    |-- No:
+        ¿Presenta síntomas neurológicos?
+        |
+        |-- Sí: Neurología
+        |
+        |-- No:
+            ¿Dolor de pecho o Presión arterial >= 140?
+            |
+            |-- Sí: Cardiología
+            |
+            |-- No:
+                ¿Temperatura >= 38.5 o Dolor >= 8?
+                |
+                |-- Sí: Urgencias
+                |
+                |-- No:
+                    ¿Días de hospitalización >= 2?
+                    |
+                    |-- Sí: Hospitalización
+                    |
+                    |-- No: Medicina General
+
+# Justificación del criterio de decisión
+
+### Trauma
+
+La primera condición evaluada corresponde a la presencia de trauma.
+
+Cuando:
+
+Trauma == 1
+
+se analiza inmediatamente si el paciente requiere una intervención quirúrgica.
+
+Si:
+
+RequiereCirugia == 1
+
+el paciente es asignado a:
+
+ Cirugía
+
+Si presenta trauma pero no requiere cirugía:
+
+Traumatología
+
+De esta manera se separan directamente los pacientes con una condición traumática según la necesidad de intervención quirúrgica.
+
+Edad
+
+Si el paciente no presenta trauma, se analiza su edad.
+
+Cuando:
+
+Edad < 14
+
+el paciente es asignado a:
+
+Pediatría
+
+Este criterio permite identificar tempranamente a los pacientes pertenecientes al grupo definido para atención pediátrica dentro del modelo del sistema.
+
+Síntomas neurológicos
+
+Si el paciente no presenta trauma y su edad es igual o superior a 14 años, se evalúa:
+
+SintomasNeurologicos
+
+Cuando:
+
+SintomasNeurologicos == 1
+
+el paciente es enviado a:
+
+Neurología
+
+Esto permite detectar una condición específica antes de continuar evaluando otros factores.
+
+Riesgo cardiológico
+
+Si el paciente no presenta síntomas neurológicos, se evalúa una condición utilizada para determinar su envío a Cardiología.
+
+La condición definida por el grupo es:
+
+TipoDolor == "pecho"
+O
+PresionArterial >= 140
+
+Si alguna de las dos condiciones es verdadera, el paciente es enviado a:
+
+Cardiología
+
+El valor de presión arterial utilizado corresponde a un umbral definido para efectos del modelo de clasificación implementado en el taller.
+
+De esta manera se utiliza tanto el tipo de dolor como la presión arterial disponible en la información del paciente.
+
+Urgencias
+
+Cuando el paciente no cumple con los criterios anteriores se evalúa:
+
+Temperatura >= 38.5
+O
+Dolor >= 8
+
+Si cualquiera de estas condiciones es verdadera, el paciente es enviado a:
+
+Urgencias
+
+Esto permite identificar pacientes con temperatura elevada o un nivel alto de dolor según los valores definidos para el sistema.
+
+Hospitalización
+
+Cuando el paciente no cumple con ninguna de las condiciones anteriores se evalúa:
+
+DiasHospitalizacion >= 2
+
+Si se cumple:
+
+Hospitalización
+
+Medicina General
+
+Cuando ninguna de las condiciones anteriores resulta verdadera, el paciente es enviado a:
+
+Medicina General
+
+De esta forma, todos los pacientes válidos poseen una ruta que finaliza en uno de los servicios disponibles.                            
+
+
+# Atributos utilizados por el árbol de decisión
+
+El árbol utiliza los siguientes atributos:
+
+Trauma.
+
+Requiere cirugía.
+
+Edad.
+
+Síntomas neurológicos.
+
+Tipo de dolor.
+
+Presión arterial.
+
+Temperatura.
+
+Nivel de dolor.
+
+Días de hospitalización.
+
+Por lo tanto, el árbol utiliza nueve atributos diferentes del paciente.
