@@ -210,8 +210,8 @@ De esta forma, todos los pacientes válidos poseen una ruta que finaliza en uno 
 
 * Temperatura.
 
-Nivel de dolor.
+* Nivel de dolor.
 
-Días de hospitalización.
+* Días de hospitalización.
 
 Por lo tanto, el árbol utiliza nueve atributos diferentes del paciente.
