@@ -293,3 +293,107 @@ De esta forma, todos los pacientes válidos poseen una ruta que finaliza en uno 
 * Días de hospitalización.
 
 Por lo tanto, el árbol utiliza nueve atributos diferentes del paciente.
+
+# funcionamiento general 
+
+Servicios
+El sistema administra los siguientes ocho servicios:
+1. Urgencias.
+2. Medicina General.
+3. Cardiología.
+4. Neurología.
+5. Traumatología.
+6. Cirugía.
+7. Pediatría.
+8. Hospitalización.
+Cada servicio posee su propio árbol AVL.
+
+## AVL
+Cada servicio contiene un árbol AVL implementado manualmente.
+
+Los pacientes almacenados dentro del AVL son ordenados utilizando:
+ID del paciente
+como clave de ordenamiento.
+
+Por ejemplo:
+ID menor -> subárbol izquierdo
+ID mayor -> subárbol derecho
+
+El AVL permite realizar:
+- Inserción de pacientes.
+- Búsqueda por ID.
+- Búsqueda por nombre.
+- Eliminación por ID.
+- Recorrido inorden.
+- Recorrido preorden.
+- Recorrido postorden.
+- Cálculo de altura.
+- Cálculo del factor de balance.
+- Visualización de factores de balance.
+
+## Balance del AVL
+
+El factor de balance se calcula utilizando:
+Altura del subárbol izquierdo - Altura del subárbol derecho
+
+El AVL implementa manualmente:
+- Rotación simple a la derecha.
+- Rotación simple a la izquierda.
+- Rotación doble izquierda-derecha.
+- Rotación doble derecha-izquierda.
+Después de cada inserción se actualizan las alturas y se comprueba el factor de balance.
+
+Cuando es necesario se realiza la rotación correspondiente para mantener la propiedad AVL.
+
+Procesamiento de pacientes
+El procesamiento sigue el siguiente procedimiento:
+1. Se obtiene el primer paciente de la Queue.
+2. Se evalúa mediante el árbol de decisión.
+3. El árbol determina el servicio.
+4. Se asigna el servicio al paciente.
+5. Se busca el servicio correspondiente.
+6. El paciente se inserta en el AVL del servicio.
+7. La atención se registra en el historial.
+
+## Recorridos
+
+Árbol de decisión
+El árbol de decisión implementa manualmente los recorridos:
+Inorden
+Preorden
+Postorden
+AVL
+Los árboles AVL de los servicios también permiten ejecutar:
+Inorden
+Preorden
+Postorden
+Esto permite consultar y verificar el contenido y la estructura de los árboles.
+
+Búsqueda de pacientes
+El sistema permite realizar búsquedas de pacientes utilizando:
+- ID.
+- Nombre.
+La búsqueda por ID aprovecha directamente el ordenamiento del árbol AVL.
+
+Eliminación de pacientes
+El sistema permite eliminar pacientes del AVL mediante su ID.
+
+La eliminación contempla:
+- Nodo sin hijos.
+- Nodo con un hijo.
+- Nodo con dos hijos.
+Después de eliminar un nodo se vuelve a calcular la altura y se aplican las rotaciones necesarias para conservar el balance del AVL.
+
+Manejo de memoria
+Las estructuras dinámicas utilizadas por el proyecto liberan su memoria mediante destructores y métodos clear().
+
+En particular:
+- El árbol AVL libera recursivamente todos sus nodos.
+- El árbol de decisión libera recursivamente todos sus nodos.
+- Queue libera sus nodos.
+- Stack libera sus nodos.
+- List libera sus nodos.
+De esta manera se evita dejar memoria dinámica asignada al finalizar la ejecución.
+
+
+
