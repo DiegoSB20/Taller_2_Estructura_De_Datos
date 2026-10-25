@@ -50,6 +50,10 @@ El proyecto fue compilado y ejecutado correctamente utilizando GitHub Codespaces
 El proyecto fue desarrollado y probado utilizando GitHub Codespaces.
 desde el menú de github se abre la opción de codespace, luego se pone new Codespace y se marca la carpeta del repositorio 
 
+## comentario
+El sistema tiene funciones para consultar servicios, buscar pacientes y recorrer los AVL en inorden, preorden y postorden. Sin embargo, el menú principal como tal no tiene la opcion de verlos 
+para ser mas apegados al diseño del menú como tal, pero si se llaman de forma manual se comprueba que cumple con eso. 
+
 La estructura principal del repositorio es:
 ```text
 Taller_2_Estructura_De_Datos/
