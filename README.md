@@ -194,21 +194,21 @@ De esta forma, todos los pacientes válidos poseen una ruta que finaliza en uno 
 
 # Atributos utilizados por el árbol de decisión
 
-El árbol utiliza los siguientes atributos:
+* El árbol utiliza los siguientes atributos:
 
-Trauma.
+* Trauma.
 
-Requiere cirugía.
+* Requiere cirugía.
 
-Edad.
+* Edad.
 
-Síntomas neurológicos.
+* Síntomas neurológicos.
 
-Tipo de dolor.
+* Tipo de dolor.
 
-Presión arterial.
+* Presión arterial.
 
-Temperatura.
+* Temperatura.
 
 Nivel de dolor.
 
